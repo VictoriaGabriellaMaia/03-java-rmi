@@ -22,3 +22,7 @@ Em outro terminal:
 ```bash
 java Cliente
 ```
+
+## Exercício
+
+1. Usando Java RMI, implemente uma calculadora remota.
