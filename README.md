@@ -1,11 +1,9 @@
 # 03-java-rmi
-Ordem de comandos:
 
-Compila��o:
-javac Task.java
-javac Compute.java
-javac ComputeEngine.java
-javac Pi.java
+## Ordem de comandos:
+
+## Compilação:
+javac *.java
 
 rmic ComputeEngine
 
