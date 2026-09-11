@@ -1,11 +1,9 @@
-import java.io.*;
 import java.rmi.*;
-import java.rmi.server.*;
 
 public class Cliente {
   public static void main(String[] args) { 
     try {
-       Servico servico = (Servico) Naming.lookup("ServiçoRemoto");
+       ServicoInterface servico = (ServicoInterface) Naming.lookup("rmi://localhost/ServiçoRemoto");
        
        System.out.println("Cliente operando!");
 

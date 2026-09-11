@@ -1,15 +1,27 @@
 # 03-java-rmi
 
-## Ordem de comandos:
+## Ordem correta para executar:
 
-## Compilação:
+### Compilação
+```bash
 javac *.java
+```
 
-rmic ComputeEngine
+### Registrar o serviço RMI
+```bash
+rmiregistry &
+```
 
-No Servidor:
-start /min rmiregistry //O start coloca os processos em background.
-start java ComputeEngine
+### Iniciar o servidor
+```bash
+java Servidor
+```
 
-No Cliente:
-start java Pi
+### Executar o cliente
+Em outro terminal:
+```bash
+java Cliente
+```
+
+> Observação: `rmic` foi removido em versões modernas do Java, então não use `rmic Servidor`.
+> O objeto remoto precisa ser exportado com `UnicastRemoteObject`.
