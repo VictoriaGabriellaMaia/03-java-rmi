@@ -3,6 +3,6 @@ public class Pi implements Parametro {
   }
   
   public Object executar() {
-    return new Double.value(Math.PI); // Retorna o valor de PI.
+    return Double.valueOf(Math.PI); // Retorna o valor de PI.
   }
 }
