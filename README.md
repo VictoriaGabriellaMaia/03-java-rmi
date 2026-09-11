@@ -22,6 +22,3 @@ Em outro terminal:
 ```bash
 java Cliente
 ```
-
-> Observação: `rmic` foi removido em versões modernas do Java, então não use `rmic Servidor`.
-> O objeto remoto precisa ser exportado com `UnicastRemoteObject`.
