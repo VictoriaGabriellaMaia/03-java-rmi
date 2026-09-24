@@ -1,18 +1,21 @@
-import  java.rmi.*;
-import java.rmi.server.*;
+import java.rmi.Naming;
 
 public class Servidor {
-  public static void main (String[] args) {  
-    try {
-      // Cria e registra o objeto remoto:
-      Servico servico = new Servico();
-      Naming.rebind ("ServiçoRemoto", servico);
 
-      System.out.println ("Servidor operando!");
-    } catch (Exception e) {
-      System.err.println ("Erro no servidor: " + e.toString ()); 
-      e.printStackTrace ();
+    public static void main(String[] args) {
+
+        try {
+            // Cria o objeto que representa o serviço remoto.
+            Servico servico = new Servico();
+
+            // Registra o serviço no RMI Registry com esse nome.
+            Naming.rebind("CalculadoraRemota", servico);
+
+            System.out.println("Servidor da calculadora operando!");
+
+        } catch (Exception e) {
+            System.err.println("Erro no servidor: " + e.toString());
+            e.printStackTrace();
+        }
     }
-  }
 }
- 
