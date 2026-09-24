@@ -20,6 +20,12 @@ public class Servico extends UnicastRemoteObject implements ServicoInterface {
     }
 
     public double dividir(double numero1, double numero2) throws RemoteException {
+        
+        if (numero2 == 0) {
+            throw new ArithmeticException("Não é possível dividir por zero.");
+        }
+        
         return numero1 / numero2;
     }
+    
 }
